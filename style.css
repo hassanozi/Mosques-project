@@ -1,0 +1,320 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root{
+    --first-color:#0E4B6B;
+    --second-color: white;
+}
+
+.clr{
+    clear: both;
+}
+
+.header
+{
+    background-color: var(--first-color);
+    position: fixed;
+    top: 0px;
+    /* right: 0px; */
+    /* left: 0px; */
+    z-index: 3;
+    width: 100%;
+    height: 40px;
+}
+
+.icon{
+    /* background-color: #0E4B6B; */
+    width: 30px;
+    height: 30px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid white;
+    /* position: relative; */
+}
+
+#call::after{
+    content: "";
+    animation-name: typing;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes typing{
+    0%{content: "002";}
+    10%{content: "002010";}
+    20%{content: "00201010";}
+    40%{content: "0020101064";}
+    60%{content: "00201010641119";}
+    80%{content: "0020101064";}
+    90%{content: "00201010";}
+    100%{content:"002010";}
+}
+
+/* .headLinks ul .call{
+    animation-name: typing;
+    animation-duration: 5s;
+} */
+
+.headLinks ul{
+    /* display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-right: 50px;
+    padding-top: 5px; */
+}
+
+.headLinks ul button{
+    background: linear-gradient(#f7b98d,#DE5A1F);
+    color: var(--second-color);
+    padding: 0px 10px;
+}
+
+.headLinks i{
+    left:10%;
+    top : 5px
+}
+.headLinks ul li{
+    /* background-color: #d2dfe6; */
+    list-style-type: none;
+    color: var(--second-color);
+    padding-left: 20px;
+    padding-right: 40px;
+    
+    /* padding-top: 10px; */
+}
+.home{
+    /* background-color: brown; */
+    /* width: 100%; */
+    background-color: #EDEDED;
+
+}
+
+#navBar{
+    transition: background-color 2s , padding 1s;
+}
+
+.navBar{
+  background-color: var(--second-color);
+  width: 100%;
+  display: flex;
+  box-shadow: 2px 2px 2px lightgrey;
+  /* float: right; */
+  position: fixed;
+  /* position: relative; */
+  z-index: 2;
+  color: var(--first-color);
+}
+
+.navLogo{
+    /* background-color: rgb(64, 28, 175); */
+    width: 25%;
+    /* float: left; */
+    margin-top: 30px;
+    text-align: center;
+}
+
+.navLogo img{
+    /* float: left; */
+    margin: 20px 150px;
+    width: 40%;
+}
+
+.navLinks{
+    width: 75%;
+    background-color:var(--second-color);
+    font-size: medium;
+    font-weight: bold;
+    padding-top: 40px;
+    color: var(--first-color);
+
+}
+
+.navLinks ul{
+    /* margin: 50px; */
+    /* float: right; */
+    /* margin-top: 10px; */
+    /* margin-bottom: 20px; */
+    color:var(--first-color);
+
+}
+/* .nav-link:hover{
+    color: var(--second-color);
+} */
+
+.navLinks ul li a{
+    /* background-color:black; */
+    /* 1 */    
+    color:var(--first-color);
+}
+
+.homeCaption{
+    background-image:url(images/Mosques-in-Egypt.jpg);
+    /* background-position: center center; */
+    height: 500px;
+    /* object-fit: cover; */
+    /* background-repeat: no-repeat; */
+    /* width: 100%; */
+    /* margin: auto; */
+    background-size: 100% 100%;
+    object-fit: cover
+}
+
+.siteBody{
+    height: 100vh;
+    /* overflow: auto; */
+    /* width: 80%; */
+    /* background-color: #EDEDED; */
+
+}
+
+.contents{
+    background-color:var(--second-color);
+    margin: 40px 120px;
+    width: 55%;
+    /* margin: auto; */
+    color: #dd5d20;
+    border: 1px solid rgb(0, 0, 0,0.2);
+    float: left;
+    /* padding: 25px 100px; */
+
+}
+
+.contents h2{
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    padding-top: 18px;
+}
+
+.contents hr{
+    color: black;
+    width: 95%;
+    margin: auto;
+    opacity: 20%;
+}
+
+.mosquesLinks li ,.mosquesLinks li a{
+    list-style-type: none;
+    padding: 5px;
+    /* font-weight: 32px; */
+    color: #dd5d20;
+}
+
+@keyframes move{
+    0%{right: 0px}
+    100% { right: 100px }
+}
+
+.contactUs{
+    width: 25%;
+    background-color:var(--second-color);
+    float: right;
+    color:var(--first-color);
+    padding-left: 40px;
+    padding-top: 20px;
+    border-radius: 5%;
+    /* margin-right: 50px; */
+    position: absolute;
+    top: 65%;
+    right: 100px;
+    animation-name: move;
+    animation-duration: 5s;
+    /* animation-iteration-count: infinite;
+    animation-direction: alternate; */
+    box-shadow: 2px 2px 2px lightgray;
+}
+
+.contactUs input{
+    border: 1px solid #ddd;
+    width: 90%;
+    height: 35px;
+    margin: 0;
+    padding: 5px;
+    border-radius: 4px;
+    margin: 10px 0px;
+}
+.contactUs button{
+    background-color:#dd5d20 ;
+    color: var(--second-color);
+    padding: 5px 20px;
+    margin: 20px;
+    border-radius: 20px;
+    border: none;
+    float: right;
+}
+
+.touch{
+    width: 25%;
+    background-color:var(--second-color);
+    float: right;
+    /* color:var(--second-color); */
+    padding-left: 40px;
+    padding-top: 20px;
+    border-radius: 5%;
+    /* margin-right: 50px; */
+    position: absolute;
+    top: 155%;
+    right: 100px;  
+    box-shadow: 2px 2px 2px lightgray;
+}
+
+.opp{
+    width: 25%;
+    background-color:var(--second-color);
+    float: right;
+    /* color:var(--second-color); */
+    padding-left: 40px;
+    padding-top: 20px;
+    border-radius: 5%;
+    /* margin-right: 50px; */
+    position: absolute;
+    top: 185%;
+    right: 100px;
+    box-shadow: 2px 2px 2px lightgray;
+}
+
+.details img{
+    width: 90%;
+}
+
+.introduction
+{
+    color:var(--first-color);
+    /* padding-left: 40px; */
+    width: 100%;
+    background-color: #EDEDED;
+    padding: 25px 110px;
+}
+
+.introduction h4:hover{
+ transform: scale(1.1,1.1);
+}
+
+.introduction p,.introduction h4 , .introduction img{
+    padding: 10px;
+    width: 65%;
+    transition: transform 2s;
+    /* transform-origin: center; */
+    margin-top: 10px;
+}
+.introduction img{
+    width: 65%;
+}
+
+.arrow{
+    position: fixed;
+    width: 3%;
+    bottom: 2%;
+    right: 5px;
+    z-index:5;
+    /* border: 2px solid #0E4B6B;
+    border-radius: 80%; */
+}
